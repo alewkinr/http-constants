@@ -4,9 +4,9 @@ A set of constants for HTTP statuses and headers. Improve your code readability.
 
 ## Installation
 
-You can install Http Constants from [PyPI](https://pypi.org/project/http-constants/):
+You can install Http Constants from [PyPI](https://pypi.org/project/http-status-codes/1.0.0/):
 
-    pip install http-status
+    pip install http-status-codes
 
 The library is supported on Python 3.7+.
 
