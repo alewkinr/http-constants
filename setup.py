@@ -12,7 +12,7 @@ from shutil import rmtree
 from setuptools import find_packages, setup, Command
 
 # Package meta-data.
-NAME = "http-status"
+NAME = "http-status-codes"
 DESCRIPTION = "The set of standard http status code constants and headers"
 URL = "https://github.com/alewkinr/http-constants"
 EMAIL = "alewkinr@gmail.com"
@@ -103,6 +103,7 @@ setup(
     author_email=EMAIL,
     python_requires=REQUIRES_PYTHON,
     url=URL,
+    download_url="https://github.com/alewkinr/http-constants/archive/v1.0.0.tar.gz",
     packages=find_packages(exclude=["tests", "*.tests", "*.tests.*", "tests.*"]),
     # If your package is a single module, use this instead of 'packages':
     # py_modules=['http_constants'],
