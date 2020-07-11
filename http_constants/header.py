@@ -1,5 +1,6 @@
 from collections import namedtuple
 
+
 class HttpHeaders:
     ACCEPT = "Accept"
     ACCEPT_CHARSET = "Accept-Charset"
@@ -62,9 +63,10 @@ class HttpHeaders:
     WWW_AUTHENTICATE = "WWW-Authenticate"
 
     CONTENT_TYPE_VALUES_TYPE = namedtuple(
-        'ContentType',
-        'bin css csv doc docx gif html jpeg jpg js json json_api pdf txt xhtml xls xlsx xml_not_readable xml_readable zip')
-    CONTENT_TYPE_VALUES = CONTENT_TYPE_VALUES_TYPE (
+        "ContentType",
+        "bin css csv doc docx gif html jpeg jpg js json json_api pdf txt xhtml xls xlsx xml_not_readable xml_readable zip",
+    )
+    CONTENT_TYPE_VALUES = CONTENT_TYPE_VALUES_TYPE(
         "application/octet-stream",
         "text/css",
         "text/csv",
@@ -86,5 +88,3 @@ class HttpHeaders:
         "text/xml",
         "application/zip",
     )
-
-
