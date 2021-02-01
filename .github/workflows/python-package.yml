@@ -37,7 +37,7 @@ jobs:
       run: |
         pytest
 
-  build:
+  build_publish:
     needs: ["lint_test"]
     runs-on: ubuntu-18.04
     strategy:
@@ -56,15 +56,8 @@ jobs:
       - name: Build dist package
         run: |
           python setup.py sdist bdist_wheel
-
-
-  publish:
-    needs: ["build"]
-    runs-on: ubuntu-18.04
-
-    steps:
-    - name: Publish package to PuPi
-      uses: pypa/gh-action-pypi-publish@v1.4.1
-      with:
-        user: __token__
-        password: ${{ secrets.PYPI_API_TOKEN }}
+      - name: Publish package to PyPi
+        uses: pypa/gh-action-pypi-publish@v1.4.1
+        with:
+          user: __token__
+          password: ${{ secrets.PYPI_API_TOKEN }}
