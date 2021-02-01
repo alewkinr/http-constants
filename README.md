@@ -4,9 +4,9 @@ A set of constants for HTTP statuses and headers. Improve your code readability.
 
 ## Installation
 
-You can install Http Constants from [PyPI](https://pypi.org/project/http-status-codes/1.0.0/):
+You can install Http Constants from [PyPI](https://pypi.org/project/http-status-codes/):
 
-    pip install http-status-codes
+    pip install http_constants
 
 The library is supported on Python 3.7+.
 
@@ -14,11 +14,11 @@ The library is supported on Python 3.7+.
 
 ### Headers
 ```
-from http_constants.headers import HttpHeaders
-HttpHeaders.ACCEPT
+from http_constants.headers import HTTPHeaders
+HTTPHeaders.ACCEPT
 > 'Accept'
 
-HttpHeaders.CONTENT_TYPE_VALUES.json
+HTTPHeaders.CONTENT_TYPE_VALUES.json
 > 'application/json'
 ```
 
@@ -36,4 +36,22 @@ In[2]:
 
 Out[2]: 
     'Internal Server Error'
+```
+
+### Methods
+```
+In[1]: 
+    from http_constants import method
+    method.GET
+Out[1]:
+    "GET"
+```
+
+### URI Schemas
+```
+In[1]: 
+    from http_constants import schema
+    schema.HTTP
+Out[1]:
+    "http"
 ```
