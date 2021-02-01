@@ -70,7 +70,7 @@ NOT_EXTENDED = 510
 NETWORK_AUTHENTICATION_REQUIRED = 511
 
 
-class HttpStatus(object):
+class HTTPStatus(object):
     _explanations = {
         100: "Continue",
         101: "Switching Protocols",

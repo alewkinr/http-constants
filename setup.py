@@ -13,17 +13,15 @@ from setuptools import find_packages, setup, Command
 
 # Package meta-data.
 NAME = "http-status-codes"
-DESCRIPTION = "The set of standard http status code constants and headers"
+DESCRIPTION = "The set of standard http constants"
 URL = "https://github.com/alewkinr/http-constants"
 EMAIL = "alewkinr@gmail.com"
 AUTHOR = "Ramil Aleshkin"
 REQUIRES_PYTHON = ">=3.6.0"
-VERSION = "1.0.0"
+VERSION = "1.0.2"
 
 # What packages are required for this module to be executed?
-REQUIRED = [
-    # 'requests', 'maya', 'records',
-]
+REQUIRED = []
 
 # What packages are optional?
 EXTRAS = {
