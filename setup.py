@@ -12,7 +12,7 @@ from shutil import rmtree
 from setuptools import find_packages, setup, Command
 
 # Package meta-data.
-NAME = "http_constants"
+NAME = "http-status-codes"
 DESCRIPTION = "The set of standard http constants"
 URL = "https://github.com/alewkinr/http-constants"
 EMAIL = "alewkinr@gmail.com"
