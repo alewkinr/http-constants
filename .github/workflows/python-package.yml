@@ -37,6 +37,11 @@ jobs:
     - name: Test with pytest
       run: |
         pytest
+
+  publish:
+    runs-on: ubuntu-latest
+
+    steps:
     - name: Publish package to PuPi
       uses: pypa/gh-action-pypi-publish@v1.4.1
       with:
