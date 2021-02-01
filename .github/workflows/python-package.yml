@@ -11,7 +11,7 @@ on:
 
 jobs:
 
-  lint_test:
+  lint-n-test:
     runs-on: ubuntu-18.04
     strategy:
       matrix:
@@ -37,8 +37,8 @@ jobs:
       run: |
         pytest
 
-  build_publish:
-    needs: ["lint_test"]
+  build-n-publish:
+    needs: ["lint-n-test"]
     runs-on: ubuntu-18.04
     strategy:
       matrix:
@@ -52,12 +52,14 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
+          python -m pip install twine setuptools wheel
           if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
       - name: Build dist package
         run: |
           python setup.py sdist bdist_wheel
       - name: Publish package to PyPi
-        uses: pypa/gh-action-pypi-publish@master
-        with:
-          user: __token__
-          password: ${{ secrets.PYPI_API_TOKEN }}
+        env:
+          TWINE_USERNAME: ${{ secrets.PYPI_USERNAME }}
+          TWINE_PASSWORD: ${{ secrets.PYPI_API_TOKEN }}
+        run: |
+          twine upload dist/*
